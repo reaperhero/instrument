@@ -70,7 +70,6 @@ func Paginate(item interface{}, page, size int) (int, error) {
 			list = list[offset : offset+size]
 		}
 		reflect.ValueOf(item).Elem().Set(reflect.ValueOf(list))
-
 	}
 
 	return count, nil
